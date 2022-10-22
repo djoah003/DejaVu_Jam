@@ -19,7 +19,7 @@ public class SPAWNERIsydaneste : MonoBehaviour
         // rnd = random number generator
         int rndEste = Random.Range(1, 3);
         int spawner = Random.Range(1, 5);
-        while (!EurobeatPlayer.isPlaying)
+        if (EurobeatPlayer.isPlaying)
         {
             if (spawner == 1)
             {
@@ -62,6 +62,7 @@ public class SPAWNERIsydaneste : MonoBehaviour
                     Instantiate(este, new Vector3(SpawnerR.transform.position.x, SpawnerR.transform.position.y, SpawnerR.transform.position.z), este.transform.rotation);
             }
         }
+        if(!EurobeatPlayer.isPlaying)
         Laskuri.HasEnded = true;
     }
 

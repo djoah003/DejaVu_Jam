@@ -7,7 +7,7 @@ public class CAMERAforward : MonoBehaviour
     public float speed;
     public GameObject CAR = null;
     public float z;
-    public float y;
+    public float x;
     // Start is called before the first frame update
     void Start()
     {
@@ -18,8 +18,8 @@ public class CAMERAforward : MonoBehaviour
     void Update()
     {
         z = z + (CAR.transform.position.z - z) * Time.deltaTime;
-        y = y + (CAR.transform.position.y - y) * Time.deltaTime;
-        transform.position = new Vector3(0, 10, z);
+        x = x + (CAR.transform.position.x - x) * Time.deltaTime;
+        transform.position = new Vector3(x, 10, z);
 
     }
 }

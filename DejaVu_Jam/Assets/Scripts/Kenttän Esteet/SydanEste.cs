@@ -20,7 +20,7 @@ public class SydanEste : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log("Este");
+ 
         if (gameObject.tag == "Sydan")
         {
             Destroy(this.gameObject);

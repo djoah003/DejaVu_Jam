@@ -28,6 +28,17 @@ public class CARmovement : MonoBehaviour
         KaistaCL.transform.Translate(new Vector3(0, 0, speed) * Time.deltaTime);
         KaistaCR.transform.Translate(new Vector3(0, 0, speed) * Time.deltaTime);
         KaistaR.transform.Translate(new Vector3(0, 0, speed) * Time.deltaTime);
+        //if(Input.GetKey("a"))
+        //{
+        //Quaternion deltaRotationLeft = Quaternion.Euler(rotationLeft * Time.deltaTime);
+        //CARrb.MoveRotation(CARrb.rotation * deltaRotationLeft);
+        //}
+        //if(Input.GetKey("d"))
+        //{
+        //    Quaternion deltaRotationRight = Quaternion.Euler(rotationRight * Time.deltaTime);
+        //    CARrb.MoveRotation(CARrb.rotation * deltaRotationRight);
+        //}
+        // Marraskuun homma: Kun vaihtaa kaistaa, niin auto k‰‰ntyy ja palaa suoraksi vaihdettua kaistan.
         KaistanVaihto();
     }
     

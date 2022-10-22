@@ -2,23 +2,23 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SYDANskripti : MonoBehaviour
+public class DESTROYskripti : MonoBehaviour
 {
-    private PISTELASKURI pistelaskuri;
+    public Vector3 position;
+
     // Start is called before the first frame update
     void Start()
     {
-        pistelaskuri = GameObject.Find("PISTELASKURI").GetComponent<PISTELASKURI>();
+        InvokeRepeating("Destroy", 10.0f, 1.0f);
     }
 
     // Update is called once per frame
     void Update()
     {
-
+        
     }
-    private void OnTriggerEnter(Collider other)
+    void Destroy()
     {
-        pistelaskuri.pisteet = pistelaskuri.pisteet + 1;
         Destroy(this.gameObject);
     }
 }

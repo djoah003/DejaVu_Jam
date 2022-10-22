@@ -15,7 +15,7 @@ public class CAMERAforward : MonoBehaviour
     }
 
     // Update is called once per frame
-    void FixedUpdate()
+    void Update()
     {
         z = z + (CAR.transform.position.z - z) * Time.deltaTime;
         y = y + (CAR.transform.position.y - y) * Time.deltaTime;

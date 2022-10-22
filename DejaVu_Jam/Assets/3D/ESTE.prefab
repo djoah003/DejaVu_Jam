@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 9178719740750638938}
   - component: {fileID: 7686322966338234004}
   - component: {fileID: 6987165811641033074}
+  - component: {fileID: 1435805575}
   m_Layer: 0
   m_Name: ESTE
   m_TagString: Untagged
@@ -92,8 +93,20 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 908818155057106011}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1435805575
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 908818155057106011}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c798176afe2d9d4bb9e969545c1728e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

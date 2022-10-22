@@ -27,19 +27,19 @@ public class PISTELASKURI : MonoBehaviour
 
     void EndingCheck()
     {
-        if (x * 0.86 >= x / pisteet) // Jos pisteet ylittää 86 % --> True Ending
+        if (x * 0.86 >= pisteet / x) // Jos pisteet ylittää 86 % --> True Ending
         {
             print("TrueEnding");
         }
-        else if (x * 0.69 >= x / pisteet) // Jos pisteet ylittää 69 % --> Good Ending
+        else if (x * 0.69 >= pisteet / x) // Jos pisteet ylittää 69 % --> Good Ending
         {
             print("GoodEnding");
         }
-        else if (x * 0.50 >= x /pisteet) // Jos pisteet ylittää 50 % --> Normal Ending
+        else if (x * 0.50 >= pisteet / x) // Jos pisteet ylittää 50 % --> Normal Ending
         {
             print("NormalEnding");
         }
-        else if (x * 0.5 < x / pisteet) // Jos pisteet alle 50 % --> Bad Ending
+        else if (x * 0.5 < pisteet / x) // Jos pisteet alle 50 % --> Bad Ending
         {
             print("BadEnding");
         }

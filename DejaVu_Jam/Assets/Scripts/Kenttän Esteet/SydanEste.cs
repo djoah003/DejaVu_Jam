@@ -6,6 +6,7 @@ public class SydanEste : MonoBehaviour
 {
     private PISTELASKURI Laskuri;
     public GameObject pistelaskuri;
+    public float nopeus;
     // Start is called before the first frame update
     void Start()
     {
@@ -15,26 +16,37 @@ public class SydanEste : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        this.gameObject.transform.position += new Vector3(0, 0, -nopeus) * Time.deltaTime;
     }
 
     private void OnTriggerEnter(Collider other)
     {
- 
-        if (gameObject.tag == "Sydan")
+    if (other.gameObject.tag != "Destroyer")
         {
-            Destroy(this.gameObject);
-            Laskuri.pisteet = Laskuri.pisteet + 1;
-
-
+            if (gameObject.tag == "Sydan")
+            {
+                Destroy(this.gameObject);
+                Laskuri.pisteet = Laskuri.pisteet + 1;
+            }
+            if (gameObject.tag == "Este")
+            {
+                Destroy(this.gameObject);
+                Laskuri.pisteet = Laskuri.pisteet - 1;
+            }
         }
-        if (gameObject.tag == "Este")
+    if (other.gameObject.tag == "Destroyer")
         {
-            Destroy(this.gameObject);
-            Laskuri.pisteet = Laskuri.pisteet - 1;
- 
-            
+            if (gameObject.tag == "Sydan")
+            {
+                Destroy(this.gameObject);
+                Laskuri.pisteet = Laskuri.pisteet + -1;
+            }
+            if (gameObject.tag == "Este")
+            {
+                Destroy(this.gameObject);
+            }
         }
-        
     }
+    
+    
 }

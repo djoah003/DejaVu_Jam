@@ -18,9 +18,9 @@ public class CAMERAforward : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        z = z + (KAISTA.transform.position.z - z) * Time.deltaTime;
+        //z = z + (CAR.transform.position.z - z) * Time.deltaTime;
         x = x + (CAR.transform.position.x - x) * Time.deltaTime;
-        transform.position = new Vector3(x, 10, z);
+        transform.position = new Vector3(x, 7, -30);
 
     }
 }

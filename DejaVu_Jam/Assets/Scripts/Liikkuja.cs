@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Liikkuja : MonoBehaviour
 {
-    public float speed = 17.0f;
+    public float nopeus;
     // Start is called before the first frame update
     void Start()
     {
@@ -14,6 +14,6 @@ public class Liikkuja : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.Translate(new Vector3(0, 0, speed) * Time.deltaTime);
+        this.gameObject.transform.position += new Vector3(0, 0, -nopeus) * Time.deltaTime;
     }
 }

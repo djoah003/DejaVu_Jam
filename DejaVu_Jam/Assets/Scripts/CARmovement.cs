@@ -24,10 +24,10 @@ public class CARmovement : MonoBehaviour
     // Update is called once per frame
     private void Update()
     {
-        KaistaL.transform.Translate(new Vector3(0, 0, speed) * Time.deltaTime);
-        KaistaCL.transform.Translate(new Vector3(0, 0, speed) * Time.deltaTime);
-        KaistaCR.transform.Translate(new Vector3(0, 0, speed) * Time.deltaTime);
-        KaistaR.transform.Translate(new Vector3(0, 0, speed) * Time.deltaTime);
+        //KaistaL.transform.Translate(new Vector3(0, 0, speed) * Time.deltaTime);
+        //KaistaCL.transform.Translate(new Vector3(0, 0, speed) * Time.deltaTime);
+        //KaistaCR.transform.Translate(new Vector3(0, 0, speed) * Time.deltaTime);
+        //KaistaR.transform.Translate(new Vector3(0, 0, speed) * Time.deltaTime);
         //if(Input.GetKey("a"))
         //{
         //Quaternion deltaRotationLeft = Quaternion.Euler(rotationLeft * Time.deltaTime);

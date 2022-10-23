@@ -785,10 +785,6 @@ public class Cardealership : MonoBehaviour
             Char4name.text = ""; // Char 4 nimi
             Char4speech.text = ""; // Char 4 puhe
         }
-        else if (primeInt == 50)
-        {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-        }
 
     }
 }

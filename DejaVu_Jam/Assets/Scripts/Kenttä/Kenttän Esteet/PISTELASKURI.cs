@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 using TMPro;
 
 public class PISTELASKURI : MonoBehaviour
@@ -55,6 +56,7 @@ public class PISTELASKURI : MonoBehaviour
             print("BadEnding");
             Ending.sprite = Lose;
         }
+        Invoke("NextScene", 5);
     }
     void PointImage()
     {
@@ -96,5 +98,8 @@ public class PISTELASKURI : MonoBehaviour
         }
     }
 
-
+    void NextScene()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+    }
 }

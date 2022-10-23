@@ -13,6 +13,9 @@ public class SPAWNERIsydaneste : MonoBehaviour
     public float timeRemaining;
     public AudioSource EurobeatPlayer;
 
+         public float bpm;
+     private float lastTime, deltaTime, timer;
+
     // CreateOne spawn one random enemy
     private void CreateOne()
     {
@@ -69,12 +72,29 @@ public class SPAWNERIsydaneste : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        InvokeRepeating("CreateOne", 5.0f, 1.0f);
+        //InvokeRepeating("CreateOne", 5.0f, 0.5f);
         Laskuri = GameObject.Find("Laskuri").GetComponent<PISTELASKURI>();
+
+        lastTime = 0f;
+        deltaTime = 0f;
+        timer = 0f;
     }
     void Update()
     {
+        //Chooses a random lane to create the note in
+        int rand = Random.Range(0, 4);
+        deltaTime = GetComponent<AudioSource>().time - lastTime;
+        timer += deltaTime;
 
+        if (timer >= (60f / bpm))
+        {
+            //Create the note
+            CreateOne();
+            timer -= (60f / bpm);
+        }
+        if (!EurobeatPlayer.isPlaying)
+            Laskuri.HasEnded = true;
+        lastTime = GetComponent<AudioSource>().time;
     }
     // Update is called once per frame
 }
